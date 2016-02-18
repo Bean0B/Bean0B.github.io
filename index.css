@@ -1,5 +1,16 @@
 .body {}
-h1{
+.jumboton {
+	height:1000px;
+	width:100%;
+	background-image: url('images/blue1.JPG');
+	background-position: center;
+	background-repeat:no-repeat;
+	background-color:#ffffff;
+	background-size: cover;
+		padding-top: 30px;
+  padding-bottom: 48px;
+	}
+.jumbotron h1{
 	font-family: helvetica;
 	color: #008080;
 }
