@@ -2,7 +2,7 @@
 .jumbotron {
 	height:300px;
 	width:100%;
-	background-image: url('images/blacklong.JPG');
+	background-image: url('images/pink.JPG');
 	background-position: center;
 	background-repeat:no-repeat;
 	background-color:#ffffff;
@@ -11,6 +11,14 @@
   padding-bottom: 48px;
 	}
 .jumbotron h1{
-	font-family:tahoma;
-	color:#ffffff;
+	position: center;
+    color:black;
+    font-family:helvetica;
+    font-size: 90px;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
+.jumbotron p{
+	color:black;
+}
+
