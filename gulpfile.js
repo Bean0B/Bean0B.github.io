@@ -24,7 +24,7 @@ gulp.task('less', function() {
         .pipe(f)
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('./css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -35,7 +35,7 @@ gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/freelancer.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('./css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -79,7 +79,7 @@ gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: ''
+            baseDir: './'
         },
     })
 })
