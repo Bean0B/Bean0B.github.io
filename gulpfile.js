@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var path = require('path');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
@@ -18,14 +19,14 @@ var banner = ['/*!\n',
 ].join('');
 
 // Compile LESS files from /less into /css
-gulp.task('less', function() {
-    var f = filter(['*', '!mixins.less', '!variables.less']);
-    return gulp.src('less/*.less')
-        .pipe(f)
-        .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('./css'))
-        .pipe(browserSync.reload({
+gulp.task('less', function () {
+  return gulp.src('./less/**/*.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.reload({
             stream: true
         }))
 });
