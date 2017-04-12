@@ -73,9 +73,8 @@ hr.star-primary:after {
 
 header {
 	text-align: center;
-	background:  url(../img/tolmie.jpg) no-repeat fixed 18%;
+	background:  url(../img/tolmie.jpg)  no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
 	color: white;
 	.container {
 		padding-top: 100px;
@@ -100,6 +99,10 @@ header {
 	}
 }
 
+.navbar-custom.affix {
+    background: rgb(108, 140, 97);
+  }
+
 @media(min-width:768px) {
 	header {
 		.container {
@@ -118,7 +121,7 @@ header {
 }
 
 .navbar-custom {
-	background: @theme-primary;
+	background: transparent;
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -188,6 +191,7 @@ header {
     }
     .navbar-custom.affix {
         padding: 10px 0;
+        background: rgb(108, 140, 97);
 		.navbar-brand {
 	        font-size: 1.5em;
 	    }
@@ -263,6 +267,7 @@ section.success {
 }
 
 @media(min-width:767px) {
+
     #portfolio {
         .portfolio-item {
             margin: 0 0 30px;
